@@ -15,6 +15,7 @@ Use Python 3.14 with the versions in `requirements.txt`:
 ```text
 python -m pip install -r requirements.txt
 python analysis.py
+python -m unittest -v
 ```
 
 The script writes `outputs/results.json`, a synthetic `simulation.csv`, and an SVG histogram. Assertions check optimization feasibility, the reference objective, and deterministic simulation reproduction. It does not connect to external services or refresh any data.
@@ -31,7 +32,7 @@ Important corrections: low-octane material can be used in a higher-octane produc
 
 10,000 independently sampled scenarios use demand Normal(10,000,2,000), price Uniform(50,70), and unit variable cost Normal(30,5). Negative demand and cost draws are clipped to zero. Units are continuous as in the mathematical scenario; a real planning model may need integer quantities.
 
-Contribution = demand Ã— (price âˆ’ variable unit cost). This is **not net profit**: fixed costs, launch costs, tax, financing, capacity, returns and marketing are absent. Fixed monthly cost scenarios are explicitly illustrative additions, not researched estimates.
+Contribution = demand * (price - variable unit cost). This is **not net profit**: fixed costs, launch costs, tax, financing, capacity, returns and marketing are absent. Fixed monthly cost scenarios are explicitly illustrative additions, not researched estimates.
 
 The seed is fixed at 20261116. Results intentionally need not match an old unseeded report. The confidence interval for the simulated mean describes Monte Carlo precision conditional on the assumptions. The scenario percentile range describes variation under those assumptions. Neither captures uncertainty in whether those assumptions are correct.
 
