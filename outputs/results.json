@@ -1,0 +1,142 @@
+{
+  "optimization": {
+    "allocation_by_raw_regular_premium": [
+      [
+        11428.57142857141,
+        0.0
+      ],
+      [
+        15000.000000000022,
+        0.0
+      ],
+      [
+        2678.5714285714225,
+        12321.428571428574
+      ],
+      [
+        5892.857142857147,
+        4107.142857142854
+      ]
+    ],
+    "volumes": [
+      35000.0,
+      16428.571428571428
+    ],
+    "blended_octane": [
+      89.0,
+      93.0
+    ],
+    "supply_used": [
+      11428.57142857141,
+      15000.000000000022,
+      14999.999999999996,
+      10000.0
+    ],
+    "profit": 42142.85714285713,
+    "revenue": 1043928.5714285714,
+    "input_cost": 1001785.7142857143,
+    "constraint_slack": [
+      8571.42857142858,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      6571.428571428569,
+      0.0,
+      0.0
+    ],
+    "local_profit_value_per_extra_unit_constraint": [
+      0.0,
+      0.42857142857142866,
+      0.7857142857142865,
+      1.1428571428571448,
+      0.3571428571428572,
+      0.0,
+      0.7142857142857143,
+      0.7142857142857143
+    ],
+    "solver": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+  },
+  "supply_sensitivity": [
+    {
+      "raw_input": 1,
+      "extra_barrels": 2000,
+      "profit_gain": 2.9103830456733704e-11,
+      "new_volumes": [
+        35000.0,
+        16428.571428571428
+      ]
+    },
+    {
+      "raw_input": 2,
+      "extra_barrels": 2000,
+      "profit_gain": 857.1428571428842,
+      "new_volumes": [
+        35000.0,
+        17000.000000000007
+      ]
+    },
+    {
+      "raw_input": 3,
+      "extra_barrels": 2000,
+      "profit_gain": 1571.4285714285943,
+      "new_volumes": [
+        35000.0,
+        18142.857142857152
+      ]
+    },
+    {
+      "raw_input": 4,
+      "extra_barrels": 2000,
+      "profit_gain": 2285.714285714341,
+      "new_volumes": [
+        35000.0,
+        19285.714285714297
+      ]
+    }
+  ],
+  "reported_rounded_allocation_profit": 42142.85,
+  "simulation": {
+    "seed": 20261116,
+    "scenarios": 10000,
+    "mean": 301166.62332968507,
+    "sample_sd": 98728.65904689635,
+    "sample_min": 45965.222089973024,
+    "sample_max": 852165.9447086713,
+    "mean_monte_carlo_95_ci": [
+      299231.3429074914,
+      303101.90375187877
+    ],
+    "scenario_2_5_and_97_5_percentiles": [
+      134814.11423479873,
+      510726.3325609504
+    ],
+    "fraction_positive": 1.0,
+    "fraction_above_200000": 0.8475,
+    "fraction_above_400000": 0.1631,
+    "fixed_cost_scenarios": [
+      {
+        "monthly_fixed_cost": 0,
+        "mean_net_after_fixed_cost": 301166.62332968507,
+        "fraction_net_loss": 0.0
+      },
+      {
+        "monthly_fixed_cost": 100000,
+        "mean_net_after_fixed_cost": 201166.62332968507,
+        "fraction_net_loss": 0.006
+      },
+      {
+        "monthly_fixed_cost": 200000,
+        "mean_net_after_fixed_cost": 101166.62332968507,
+        "fraction_net_loss": 0.1525
+      },
+      {
+        "monthly_fixed_cost": 300000,
+        "mean_net_after_fixed_cost": 1166.6233296850696,
+        "fraction_net_loss": 0.5296
+      }
+    ],
+    "interpretation": "Simulated contribution before fixed/launch costs; independent inputs; zero-clipped normal demand and costs. CI measures simulation precision conditional on assumed distributions, not business uncertainty."
+  },
+  "checks": "Solver feasible/optimal; supply/demand/octane/nonnegativity checked; reference objective checked; seeded reproducibility checked."
+}
